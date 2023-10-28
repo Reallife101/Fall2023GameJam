@@ -14,6 +14,8 @@ public class machineGunAttack : Attacks
     int maxBullet;
     [SerializeField]
     int maxSpread;
+    [SerializeField]
+    float waitTime;
 
     private EnemyAI ai;
 
@@ -24,7 +26,7 @@ public class machineGunAttack : Attacks
 
     public override void atk()
     {
-        StartCoroutine(spray1(0.1f, degrees, 0, true));
+        StartCoroutine(spray1(waitTime, degrees, 0, true));
 
 
     }
