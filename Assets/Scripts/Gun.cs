@@ -10,7 +10,6 @@ public class Gun : MonoBehaviour
     private Camera cam;
     private GunUI gunUI;
     [SerializeField] protected Bullet bullet;
-    [SerializeField] private float speed = 5f;
     [SerializeField] private float fireDelay;
     [SerializeField] private float reloadDelay;
     [SerializeField] private int loadSize;
@@ -43,7 +42,7 @@ public class Gun : MonoBehaviour
         {
             reload();
         }
-        if (Input.GetMouseButton(0) && fClock <= 0 && inLoad > 0 && rClock <= 0)
+        if (getShootInput() && fClock <= 0 && inLoad > 0 && rClock <= 0)
         {
             shoot();
             
@@ -57,6 +56,10 @@ public class Gun : MonoBehaviour
 
         fClock -= Time.deltaTime;
         rClock -= Time.deltaTime;
+    }
+
+    virtual protected bool getShootInput() {
+        return Input.GetMouseButton(0);
     }
 
     virtual protected void shoot()
