@@ -12,6 +12,8 @@ public class BossAI : AI
     private TMP_Text phaseName;
 
     [SerializeField]
+    private List<Attacks> allAttacks;
+
     private List<Attacks> attackList;
 
     [SerializeField]
@@ -103,6 +105,13 @@ public class BossAI : AI
         Health = phases[currentPhase].maxHealth;
         currentHealth = Health;
         hb.sliderMax(Health);
+
+        //Deal with Attacks
+        attackList.Clear();
+        foreach (int index in phases[currentPhase].attackListIndex)
+        {
+            attackList.Add(allAttacks[index]);
+        }
     }
 
 }
