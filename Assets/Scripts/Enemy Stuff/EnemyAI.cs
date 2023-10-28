@@ -12,8 +12,6 @@ public class EnemyAI : AI
     [SerializeField]
     private float delayBetweenAttacks;
 
-    public bool canAttack;
-
     private float timeElapsed;
     private float currentHealth;
 

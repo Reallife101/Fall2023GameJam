@@ -17,16 +17,17 @@ public class machineGunAttack : Attacks
     [SerializeField]
     float waitTime;
 
-    private EnemyAI ai;
+    private AI ai;
 
     private void Start()
     {
-        ai = GetComponent<EnemyAI>();
+        ai = GetComponent<AI>();
     }
 
     public override void atk()
     {
-        StartCoroutine(spray1(waitTime, degrees, 0, true));
+        coroutine = spray1(waitTime, degrees, 0, true);
+        StartCoroutine(coroutine);
 
 
     }
@@ -71,4 +72,8 @@ public class machineGunAttack : Attacks
         StartCoroutine(spray1(waitTime, degrees, currentBullet + 1, down));
     }
 
+    public override void stopAtk()
+    {
+        StopCoroutine(coroutine);
+    }
 }

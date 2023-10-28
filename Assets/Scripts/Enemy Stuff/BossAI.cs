@@ -24,8 +24,6 @@ public class BossAI : AI
 
     [SerializeField]
     private Animator hbAnimator;
-
-    public bool canAttack;
     public bool invincible;
 
     private float timeElapsed;
@@ -36,6 +34,7 @@ public class BossAI : AI
     // Start is called before the first frame update
     void Start()
     {
+        attackList = new List<Attacks>();
         timeElapsed = 0;
         currentPhase = 0;
         updatePhase();
@@ -55,6 +54,10 @@ public class BossAI : AI
 
         if (currentHealth < 0)
         {
+            foreach(Attacks attack in attackList)
+            {
+                attack.stopAtk();
+            }
             StartCoroutine(goNextPhase());
         }
 
@@ -93,6 +96,10 @@ public class BossAI : AI
         hbAnimator.SetBool("down", true);
         yield return new WaitForSeconds(3f);
         currentPhase += 1;
+        if (currentPhase >= phases.Count)
+        {
+            Debug.Log("Win");
+        }
         updatePhase();
         hbAnimator.SetBool("down", false);
         yield return new WaitForSeconds(3f);

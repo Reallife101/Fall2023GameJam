@@ -15,5 +15,11 @@ public class MultiAttack : Attacks
         }
     }
 
-
+    public override void stopAtk()
+    {
+        foreach (Attacks attack in attackList)
+        {
+            attack.stopAtk();
+        }
+    }
 }
