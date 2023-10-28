@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6274150874095003888}
   - component: {fileID: 8934933582181208190}
   - component: {fileID: 1542161094016692024}
+  - component: {fileID: 1724710162839423447}
+  - component: {fileID: 4981096992347729223}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -101,9 +103,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 0
   attackList:
-  - {fileID: 1542161094016692024}
+  - {fileID: 4981096992347729223}
   delayBetweenAttacks: 1
-  canAttack: 0
+  canAttack: 1
 --- !u!114 &8934933582181208190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,3 +138,39 @@ MonoBehaviour:
   degrees: 30
   maxBullet: 15
   maxSpread: 60
+  waitTime: 0.2
+--- !u!114 &1724710162839423447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2429034508251746872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8849dff88300d18438cfbc5af36a4ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 8147124044907786985, guid: 3dfd541fa52e92b42b1e530901fe1252, type: 3}
+  spawnInfront: 0.5
+  waitTime: 0.25
+  loopAmount: 3
+--- !u!114 &4981096992347729223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2429034508251746872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e48e03d356ce642b2acb8c570d74be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 8147124044907786985, guid: 3dfd541fa52e92b42b1e530901fe1252, type: 3}
+  spawnInfront: 0.5
+  degreeStep: 10
+  degrees: 0
+  maxBullet: 70
+  maxSpread: 700
+  waitTime: 0.05
