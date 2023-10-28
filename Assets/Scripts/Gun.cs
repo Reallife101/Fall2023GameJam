@@ -7,8 +7,9 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     private Vector3 mousePos;
-    [SerializeField] private Camera cam;
-    [SerializeField] private Bullet bullet;
+    private Camera cam;
+    private GunUI gunUI;
+    [SerializeField] protected Bullet bullet;
     [SerializeField] private float speed = 5f;
     [SerializeField] private float fireDelay;
     [SerializeField] private float reloadDelay;
@@ -21,17 +22,19 @@ public class Gun : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         fClock = 0;
         rClock = 0;
         inLoad = loadSize;
+        cam = FindObjectOfType<Camera>();
+        gunUI = FindObjectOfType<GunUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 mousePos = FindObjectOfType<Camera>().ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector3 direction = mousePos - gameObject.transform.position;
         Vector2 velocity = (new Vector2(direction.x, direction.y)).normalized;
 
@@ -59,10 +62,15 @@ public class Gun : MonoBehaviour
     virtual protected void shoot()
     {
         transform.rotation = Quaternion.AngleAxis(UnityEngine.Random.Range(-coneSize / 2f, coneSize / 2f), new Vector3(0, 0, 1)) * transform.rotation;
-        Instantiate(bullet, transform.position, Quaternion.identity);
+        Instantiate(bullet, transform.position, transform.rotation);
+        updateBullets();
+    }
+
+    protected void updateBullets()
+    {
         fClock = fireDelay;
         inLoad -= 1;
-        FindObjectOfType<GunUI>().updateUI(inLoad);
+        gunUI.updateUI(inLoad);
     }
 
     private void Aim(Vector2 dir, bool complete)
