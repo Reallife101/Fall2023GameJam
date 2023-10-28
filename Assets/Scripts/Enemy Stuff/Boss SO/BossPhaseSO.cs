@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class BossPhaseSO : ScriptableObject
 {
     public string phaseName;
+    public string BorderTrigger;
 
     public float maxHealth;
     
