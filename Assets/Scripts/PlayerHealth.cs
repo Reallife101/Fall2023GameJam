@@ -6,6 +6,8 @@ using System;
 public class PlayerHealth : MonoBehaviour
 {
     public static event Action PlayerHitEvent;
+    public static event Action PlayerHealEvent;
+    public static event Action PlayerDeathEvent;
     [SerializeField] int maxHealth;
     int currentHealth;
     [SerializeField] string enemyProjectileTag;
@@ -22,12 +24,25 @@ public class PlayerHealth : MonoBehaviour
         if (collision.gameObject.tag == enemyProjectileTag && !invul)
         {
             StartCoroutine(invincibilityCoroutine());
+            TakeDamage();
         }
     }
 
     private void TakeDamage()
     {
         PlayerHitEvent?.Invoke();
+        currentHealth--;
+        if(currentHealth <= 0)
+        {
+            PlayerDeathEvent?.Invoke();
+            Destroy(gameObject);
+        }
+    }
+
+    private void Heal()
+    {
+        currentHealth++;
+        PlayerHealEvent?.Invoke();
     }
 
     IEnumerator invincibilityCoroutine()
