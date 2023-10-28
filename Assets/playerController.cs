@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,11 +9,14 @@ public class playerController : MonoBehaviour
 
     private PlayerControllerInputAsset input;
 
+    [SerializeField] Vector2 maxMovement;
+
     public InputAction playerMove { get; private set; }
     public InputAction playerFall { get; private set; }
 
     //movement
     private Vector2 movementVector;
+    private float fallFloat;
     private Vector3 StartVelocity = Vector3.zero;
     private Rigidbody2D myRB;
 
@@ -29,6 +33,7 @@ public class playerController : MonoBehaviour
         input = new PlayerControllerInputAsset();
 
         playerMove = input.Player.Move;
+        playerFall = input.Player.space;
 
         myRB = GetComponent<Rigidbody2D>();
     }
@@ -36,11 +41,21 @@ public class playerController : MonoBehaviour
     private void Update()
     {
         movement();
+
+        //Force Fix positions
+        if (transform.position.y > maxMovement.y)
+        {
+            transform.position = new Vector3(transform.position.x, maxMovement.y, transform.position.z);
+        }
     }
 
     private void movement()
     {
         movementVector = playerMove.ReadValue<Vector2>();
+        fallFloat = playerFall.ReadValue<float>();
+
+        float newYVelocity = myRB.velocity.y;
+
 
         // flipsprite
         if (movementVector.x != 0)
@@ -48,19 +63,60 @@ public class playerController : MonoBehaviour
             transform.localScale = new Vector3(Mathf.Sign(movementVector.x), transform.localScale.y, transform.localScale.z);
         }
 
-        Vector3 VelocityChange = new Vector2(Time.fixedDeltaTime * moveSpeed * 10 * movementVector.x, myRB.velocity.y);
-        myRB.velocity = Vector3.SmoothDamp(myRB.velocity, VelocityChange, ref StartVelocity, movementSmoothing);
+        //handle jump and fall
+        if (fallFloat == 0)
+        {
+            if (transform.position.y > maxMovement.y)
+            {
+                myRB.gravityScale = 0f;
+                newYVelocity = 0f;
+            }
+            else
+            {
+                myRB.gravityScale = -1f;
+            }
+        }
+        else
+        {
+            if (transform.position.y < -maxMovement.y)
+            {
+                myRB.gravityScale = 0f;
+                newYVelocity = 0f;
+            }
+            else
+            {
+                myRB.gravityScale = 1f;
+            };
+        }
+
+
+        
+        //Bind movement within box
+        if ((movementVector.x<0 && transform.position.x < -maxMovement.x) || (movementVector.x > 0 && transform.position.x > maxMovement.x))
+        {
+            Vector3 VelocityChange = new Vector2(0, newYVelocity);
+            VelocityChange = Vector3.SmoothDamp(myRB.velocity, VelocityChange, ref StartVelocity, movementSmoothing);
+            myRB.velocity = new Vector3(VelocityChange.x, newYVelocity, VelocityChange.z);
+        }
+        else
+        {
+            Vector3 VelocityChange = new Vector2(Time.fixedDeltaTime * moveSpeed * 10 * movementVector.x, newYVelocity);
+            VelocityChange = Vector3.SmoothDamp(myRB.velocity, VelocityChange, ref StartVelocity, movementSmoothing);
+            myRB.velocity = new Vector3(VelocityChange.x, newYVelocity, VelocityChange.z);
+        }
 
     }
 
     private void OnEnable()
     {
         playerMove.Enable();
+        playerFall.Enable();
     }
 
     private void OnDisable()
     {
         playerMove.Disable();
+        playerFall.Disable();
     }
 
 

@@ -545,6 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5b91f7338e7a134e8c4975325ca2fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxMovement: {x: 17, y: 9}
   movementSmoothing: 0.05
   moveSpeed: 35
   fallSpeed: 0

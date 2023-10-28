@@ -1,5 +1,5 @@
 {
-    "name": "Fall2023GameJam",
+    "name": "PlayerControllerInputAsset",
     "maps": [
         {
             "name": "Player",
@@ -27,6 +27,15 @@
                     "name": "Fire",
                     "type": "Button",
                     "id": "bd74e8b9-981a-48de-9a29-24e00a609972",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "space",
+                    "type": "Button",
+                    "id": "3f7c3c15-f135-48f8-b983-2b5fdbf5e174",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -251,6 +260,17 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4392bf91-b4bd-48fe-b338-9fdb12f4b1a9",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "space",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
