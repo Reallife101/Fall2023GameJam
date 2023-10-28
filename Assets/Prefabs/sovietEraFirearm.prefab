@@ -46,13 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fbf58300a4df6243b55e2a83bbf7530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   bullet: {fileID: 5586194580087859932, guid: 63dd38ae176537e42a3577bc093493e5, type: 3}
   speed: 500
   fireDelay: 0.1
   reloadDelay: 1.5
   loadSize: 35
-  coneSize: 15
+  coneSize: 10
 --- !u!212 &-3343394058558057417
 SpriteRenderer:
   m_ObjectHideFlags: 0
