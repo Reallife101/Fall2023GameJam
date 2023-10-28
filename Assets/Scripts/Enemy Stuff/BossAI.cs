@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
-public class EnemyAI : AI
+public class BossAI : AI
 {
+    [SerializeField]
+    private healthBar hb;
 
     [SerializeField]
     private List<Attacks> attackList;
@@ -23,6 +24,7 @@ public class EnemyAI : AI
     {
         timeElapsed = 0;
         currentHealth = Health;
+        hb.sliderMax(Health);
     }
 
 
@@ -30,10 +32,11 @@ public class EnemyAI : AI
     public override void takeDamage(float dmg)
     {
         currentHealth -= dmg;
+        hb.setSlider(currentHealth);
 
         if (currentHealth < 0)
         {
-            Destroy(gameObject);
+            Debug.Log("dead");
         }
 
     }
@@ -41,6 +44,7 @@ public class EnemyAI : AI
     public override void gainHealth(float hlth)
     {
         currentHealth += hlth;
+        hb.setSlider(currentHealth);
 
         if (currentHealth > Health)
         {
