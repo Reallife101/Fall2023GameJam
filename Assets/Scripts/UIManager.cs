@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        /*
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             PlayerHit();
@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
         {
             PlayerHealed();
         }
-        */
+        
     }
 
     void PlayerHit()
