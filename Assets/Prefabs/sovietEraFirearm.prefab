@@ -52,6 +52,7 @@ MonoBehaviour:
   fireDelay: 0.1
   reloadDelay: 1.5
   loadSize: 35
+  coneSize: 15
 --- !u!212 &-3343394058558057417
 SpriteRenderer:
   m_ObjectHideFlags: 0

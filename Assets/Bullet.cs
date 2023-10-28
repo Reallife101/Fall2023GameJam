@@ -14,9 +14,9 @@ public class Bullet : MonoBehaviour
     {
         Vector3 mousePos = FindObjectOfType<Camera>().ScreenToWorldPoint(Input.mousePosition);
         Vector3 direction = mousePos - FindObjectOfType<Gun>().gameObject.transform.position;
-        Vector2 velocity = (new Vector2(direction.x, direction.y)).normalized * speed;
+        Vector2 velocity = (FindObjectOfType<Gun>().gameObject.transform.right).normalized * speed;
         rb.velocity = velocity;
-        transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(velocity.y, velocity.x) * Mathf.Rad2Deg);
+        transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(velocity.y, velocity.x) * Mathf.Rad2Deg));
         Destroy(gameObject, 1.5f);
     }
 
