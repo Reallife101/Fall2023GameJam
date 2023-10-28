@@ -222,21 +222,17 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 751289892}
-    - target: {fileID: 6296113155679683549, guid: 3f61b2974e172a74995e252bb87ad9a6, type: 3}
-      propertyPath: speed
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 6391194465204359880, guid: 3f61b2974e172a74995e252bb87ad9a6, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6391194465204359880, guid: 3f61b2974e172a74995e252bb87ad9a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4973752
+      value: -4.16
       objectReference: {fileID: 0}
     - target: {fileID: 6391194465204359880, guid: 3f61b2974e172a74995e252bb87ad9a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.010042533
+      value: 1.55
       objectReference: {fileID: 0}
     - target: {fileID: 6391194465204359880, guid: 3f61b2974e172a74995e252bb87ad9a6, type: 3}
       propertyPath: m_LocalPosition.z

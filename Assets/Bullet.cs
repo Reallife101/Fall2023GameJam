@@ -16,6 +16,7 @@ public class Bullet : MonoBehaviour
         Vector2 velocity = (new Vector2(direction.x, direction.y)).normalized * speed;
         rb.velocity = velocity;
         transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(velocity.y, velocity.x) * Mathf.Rad2Deg);
+        Destroy(gameObject, 1.5f);
     }
 
     // Update is called once per frame

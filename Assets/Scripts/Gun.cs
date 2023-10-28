@@ -53,7 +53,7 @@ public class Gun : MonoBehaviour
 
     private void shoot()
     {
-        Instantiate(bullet, transform);
+        Instantiate(bullet, transform.position, Quaternion.identity);
     }
 
     private void reload()
