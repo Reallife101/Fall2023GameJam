@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1542161094016692024}
   - component: {fileID: 1724710162839423447}
   - component: {fileID: 4981096992347729223}
+  - component: {fileID: 1519737973051395956}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -103,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 0
   attackList:
-  - {fileID: 4981096992347729223}
+  - {fileID: 1519737973051395956}
   delayBetweenAttacks: 1
   canAttack: 1
 --- !u!114 &8934933582181208190
@@ -174,3 +175,19 @@ MonoBehaviour:
   maxBullet: 70
   maxSpread: 700
   waitTime: 0.05
+--- !u!114 &1519737973051395956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2429034508251746872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164f97f566b64f745bd2283aa95aad87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
+  attackList:
+  - {fileID: 4981096992347729223}
+  - {fileID: 1542161094016692024}

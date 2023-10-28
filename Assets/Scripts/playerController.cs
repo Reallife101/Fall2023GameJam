@@ -23,8 +23,6 @@ public class playerController : MonoBehaviour
     [SerializeField] private float movementSmoothing;
 
     [SerializeField] private float moveSpeed;
-    [SerializeField] private float fallSpeed;
-    [SerializeField] private float ascendSpeed;
 
     public float MovementSmoothing { get { return movementSmoothing; } set { movementSmoothing = value; } }
 
@@ -62,21 +60,8 @@ public class playerController : MonoBehaviour
         {
             transform.localScale = new Vector3(Mathf.Sign(movementVector.x), transform.localScale.y, transform.localScale.z);
         }
-
         //handle jump and fall
-        if (fallFloat == 0)
-        {
-            if (transform.position.y > maxMovement.y)
-            {
-                myRB.gravityScale = 0f;
-                newYVelocity = 0f;
-            }
-            else
-            {
-                myRB.gravityScale = -1f;
-            }
-        }
-        else
+        if (fallFloat == 1 || movementVector.y<-0.5f)
         {
             if (transform.position.y < -maxMovement.y)
             {
@@ -87,6 +72,19 @@ public class playerController : MonoBehaviour
             {
                 myRB.gravityScale = 1f;
             };
+        }
+        else
+        {
+            if (transform.position.y > maxMovement.y)
+            {
+                myRB.gravityScale = 0f;
+                newYVelocity = 0f;
+            }
+            else
+            {
+                myRB.gravityScale = -1f;
+            }
+            
         }
 
 
