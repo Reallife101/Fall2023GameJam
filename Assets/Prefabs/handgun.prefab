@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884c4c7b88ced9a43bdde8e4806243d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shakeIntensity: 1
+  shakeTime: 0.1
   bullet: {fileID: 5586194580087859932, guid: 63dd38ae176537e42a3577bc093493e5, type: 3}
   fireDelay: 0.015
   reloadDelay: 1

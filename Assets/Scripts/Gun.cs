@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    [SerializeField] float shakeIntensity;
+    [SerializeField] float shakeTime;
+
     private Vector3 mousePos;
     private Camera cam;
     private GunUI gunUI;
@@ -66,6 +69,7 @@ public class Gun : MonoBehaviour
     {
         transform.rotation = Quaternion.AngleAxis(UnityEngine.Random.Range(-coneSize / 2f, coneSize / 2f), new Vector3(0, 0, 1)) * transform.rotation;
         Instantiate(bullet, transform.position, transform.rotation);
+        CinemachineShake.Instance.ShakeCamera(shakeIntensity, shakeTime);
         updateBullets();
     }
 
