@@ -13,7 +13,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private float fireDelay;
     [SerializeField] private float reloadDelay;
     [SerializeField] private int loadSize;
-    [SerializeField] private float coneSize;
+    [SerializeField] protected float coneSize;
     private float fClock;
     private float rClock;
     private int inLoad;
@@ -56,7 +56,7 @@ public class Gun : MonoBehaviour
         rClock -= Time.deltaTime;
     }
 
-    private void shoot()
+    virtual protected void shoot()
     {
         transform.rotation = Quaternion.AngleAxis(UnityEngine.Random.Range(-coneSize / 2f, coneSize / 2f), new Vector3(0, 0, 1)) * transform.rotation;
         Instantiate(bullet, transform.position, Quaternion.identity);
@@ -67,7 +67,6 @@ public class Gun : MonoBehaviour
 
     private void Aim(Vector2 dir, bool complete)
     {
-        Debug.Log(complete);
         if (!complete)
         {
             transform.rotation = Quaternion.Lerp(Quaternion.Euler(0, 0, (Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg)), transform.rotation, .75f * Mathf.Pow(0.5f, Time.deltaTime));
