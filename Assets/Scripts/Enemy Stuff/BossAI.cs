@@ -24,6 +24,8 @@ public class BossAI : AI
 
     [SerializeField]
     private Animator hbAnimator;
+    [SerializeField]
+    private Animator borderAnimator;
     public bool invincible;
 
     private float timeElapsed;
@@ -102,6 +104,7 @@ public class BossAI : AI
         }
         else
         {
+            borderAnimator.SetTrigger(phases[currentPhase].BorderTrigger);
             updatePhase();
             hbAnimator.SetBool("down", false);
             yield return new WaitForSeconds(3f);

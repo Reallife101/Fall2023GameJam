@@ -74,6 +74,9 @@ public class machineGunAttack : Attacks
 
     public override void stopAtk()
     {
-        StopCoroutine(coroutine);
+        if (coroutine!=null)
+        {
+            StopCoroutine(coroutine);
+        }
     }
 }

@@ -932,8 +932,10 @@ MonoBehaviour:
   phases:
   - {fileID: 11400000, guid: d67edfdb679335c4abd2b5f0e8e99c5d, type: 2}
   - {fileID: 11400000, guid: ff189162420eae346afe15a1aa2f980e, type: 2}
+  - {fileID: 11400000, guid: 04dce0412278fb7449877e3b1c337fbd, type: 2}
   delayBetweenAttacks: 2
   hbAnimator: {fileID: 2055512600}
+  borderAnimator: {fileID: 1347772107}
   invincible: 0
 --- !u!212 &1302115027
 SpriteRenderer:
