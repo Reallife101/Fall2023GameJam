@@ -26,4 +26,19 @@ public class MoveProjectile : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "borders")
+        {
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            //DoDamage
+            Destroy(gameObject);
+        }
+    }
+
+
 }

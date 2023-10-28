@@ -19,7 +19,12 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-       AI enemy = collision.gameObject.GetComponent<AI>();
+        if (collision.gameObject.tag=="borders")
+        {
+            Destroy(gameObject);
+        }
+
+        AI enemy = collision.gameObject.GetComponent<AI>();
 
         if (enemy)
         {

@@ -100,10 +100,13 @@ public class BossAI : AI
         {
             Debug.Log("Win");
         }
-        updatePhase();
-        hbAnimator.SetBool("down", false);
-        yield return new WaitForSeconds(3f);
-        invincible = false;
+        else
+        {
+            updatePhase();
+            hbAnimator.SetBool("down", false);
+            yield return new WaitForSeconds(3f);
+            invincible = false;
+        }    
     }
 
     public void updatePhase()
