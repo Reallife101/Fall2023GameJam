@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc72cafd4c135f44a87378df31faa4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 0
+  Health: 3
   canAttack: 0
   attackList:
   - {fileID: 7240695201719969368}
