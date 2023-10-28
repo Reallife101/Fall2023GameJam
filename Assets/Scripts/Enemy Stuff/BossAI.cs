@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BossAI : AI
 {
@@ -8,12 +9,22 @@ public class BossAI : AI
     private healthBar hb;
 
     [SerializeField]
+    private TMP_Text phaseName;
+
+    [SerializeField]
     private List<Attacks> attackList;
+
+    [SerializeField]
+    private List<BossPhaseSO> phases;
 
     [SerializeField]
     private float delayBetweenAttacks;
 
+    [SerializeField]
+    private Animator hbAnimator;
+
     public bool canAttack;
+    public bool invincible;
 
     private float timeElapsed;
     private float currentHealth;
@@ -25,20 +36,24 @@ public class BossAI : AI
     {
         timeElapsed = 0;
         currentPhase = 0;
-        currentHealth = Health;
-        hb.sliderMax(Health);
+        updatePhase();
     }
 
 
     // Health Stuff
     public override void takeDamage(float dmg)
     {
+        if (invincible)
+        {
+            return;
+        }
+        
         currentHealth -= dmg;
         hb.setSlider(currentHealth);
 
         if (currentHealth < 0)
         {
-            Debug.Log("dead");
+            StartCoroutine(goNextPhase());
         }
 
     }
@@ -70,8 +85,24 @@ public class BossAI : AI
         }
     }
 
-    public void goNextPhase()
+    IEnumerator goNextPhase()
     {
-
+        invincible = true;
+        hbAnimator.SetBool("down", true);
+        yield return new WaitForSeconds(3f);
+        currentPhase += 1;
+        updatePhase();
+        hbAnimator.SetBool("down", false);
+        yield return new WaitForSeconds(3f);
+        invincible = false;
     }
+
+    public void updatePhase()
+    {
+        phaseName.text = phases[currentPhase].name;
+        Health = phases[currentPhase].maxHealth;
+        currentHealth = Health;
+        hb.sliderMax(Health);
+    }
+
 }
