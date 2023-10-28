@@ -63,7 +63,7 @@ public class playerController : MonoBehaviour
         // flipsprite
         if (movementVector.x != 0)
         {
-            transform.localScale = new Vector3(Mathf.Sign(movementVector.x), transform.localScale.y, transform.localScale.z);
+            //transform.localScale = new Vector3(Mathf.Sign(movementVector.x), transform.localScale.y, transform.localScale.z);
         }
         //handle jump and fall
         if (fallFloat == 1 || movementVector.y<-0.5f)
