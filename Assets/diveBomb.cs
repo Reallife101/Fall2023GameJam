@@ -15,15 +15,16 @@ public class diveBomb : Attacks
     private void Start()
     {
         timer = 0;
-        move = false;
+        move = true;
+        coroutine = waitEnable();
+        StartCoroutine(coroutine);
     }
     public override void atk()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Vector3 dirVec = transform.position - player.transform.position;
         float angle = Mathf.Atan2(dirVec.y, dirVec.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, (angle-90)));
-        move = true;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, (angle+90)));
     }
 
 
@@ -31,7 +32,7 @@ public class diveBomb : Attacks
     {
         if (move)
         {
-            transform.position = transform.position + -transform.up * speed * Time.deltaTime;
+            transform.position = transform.position + transform.up * speed * Time.deltaTime;
             timer = timer + Time.deltaTime;
         }
 
@@ -56,6 +57,17 @@ public class diveBomb : Attacks
     public override void stopAtk()
     {
         //Later
+    }
+
+    IEnumerator waitEnable()
+    {
+        yield return new WaitForSeconds(2f);
+        move = false;
+        yield return new WaitForSeconds(.25f);
+        atk();
+        yield return new WaitForSeconds(.25f);
+        speed = speed * 2;
+        move = true;
     }
 
 }
