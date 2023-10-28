@@ -12,4 +12,8 @@ public class attackDebug : Attacks
         Debug.Log(debugString);
     }
 
+    public override void stopAtk()
+    {
+        Debug.Log("stop Attack");
+    }
 }

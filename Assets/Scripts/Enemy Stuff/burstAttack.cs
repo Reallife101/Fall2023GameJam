@@ -20,7 +20,8 @@ public class burstAttack : Attacks
 
     public override void atk()
     {
-        StartCoroutine(waitEnable());
+        coroutine = waitEnable();
+        StartCoroutine(coroutine);
 
 
     }
@@ -34,5 +35,10 @@ public class burstAttack : Attacks
         }
 
         ai.canAttack = true;
+    }
+
+    public override void stopAtk()
+    {
+        StopCoroutine(coroutine);
     }
 }
