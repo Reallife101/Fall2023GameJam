@@ -14,6 +14,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private float reloadDelay;
     [SerializeField] private int loadSize;
     [SerializeField] protected float coneSize;
+    [SerializeField] protected GameObject bulletSpot;
     private float fClock;
     private float rClock;
     private int inLoad;
@@ -65,7 +66,7 @@ public class Gun : MonoBehaviour
     virtual protected void shoot()
     {
         transform.rotation = Quaternion.AngleAxis(UnityEngine.Random.Range(-coneSize / 2f, coneSize / 2f), new Vector3(0, 0, 1)) * transform.rotation;
-        Instantiate(bullet, transform.position, transform.rotation);
+        Instantiate(bullet, bulletSpot.transform.position, transform.rotation);
         updateBullets();
     }
 
