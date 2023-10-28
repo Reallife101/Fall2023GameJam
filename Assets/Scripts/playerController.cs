@@ -45,6 +45,11 @@ public class playerController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, maxMovement.y, transform.position.z);
         }
+
+        if (transform.position.y < -maxMovement.y)
+        {
+            transform.position = new Vector3(transform.position.x, -maxMovement.y, transform.position.z);
+        }
     }
 
     private void movement()

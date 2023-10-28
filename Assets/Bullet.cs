@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float speed;
+    [SerializeField] float damage;
     Vector2 velocity;
     // Start is called before the first frame update
     void Start()
@@ -19,9 +20,14 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, 1.5f);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+       AI enemy = collision.gameObject.GetComponent<AI>();
+
+        if (enemy)
+        {
+            enemy.takeDamage(damage);
+            Destroy(gameObject);
+        }
     }
 }

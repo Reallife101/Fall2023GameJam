@@ -17,12 +17,14 @@ public class BossAI : AI
 
     private float timeElapsed;
     private float currentHealth;
+    private int currentPhase;
 
 
     // Start is called before the first frame update
     void Start()
     {
         timeElapsed = 0;
+        currentPhase = 0;
         currentHealth = Health;
         hb.sliderMax(Health);
     }
@@ -66,5 +68,10 @@ public class BossAI : AI
                 canAttack = false;
             }
         }
+    }
+
+    public void goNextPhase()
+    {
+
     }
 }
