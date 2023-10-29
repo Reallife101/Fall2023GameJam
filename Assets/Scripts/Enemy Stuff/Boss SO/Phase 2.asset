@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phaseName: Phase 2
   BorderTrigger: halfBorder
-  maxHealth: 2
+  maxHealth: 200
   attackListIndex: 03000000
