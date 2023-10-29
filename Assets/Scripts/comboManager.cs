@@ -4,7 +4,9 @@ using UnityEngine;
 using Cinemachine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+
 
 public class comboManager : MonoBehaviour
 {
@@ -26,7 +28,7 @@ public class comboManager : MonoBehaviour
 
     private Coroutine effectCoroutine = null;
 
-    [SerializeField] private PostProcessVolume PV;
+    [SerializeField] private Volume PV;
     private Bloom bloom;
     private ChromaticAberration ca;
     private Vignette vig;
@@ -43,9 +45,9 @@ public class comboManager : MonoBehaviour
             CM_Instance = this;
         }
 
-        PV.profile.TryGetSettings<Bloom>(out bloom);
-        PV.profile.TryGetSettings<ChromaticAberration>(out ca);
-        PV.profile.TryGetSettings<Vignette>(out vig);
+        PV.profile.TryGet<Bloom>(out bloom);
+        PV.profile.TryGet<ChromaticAberration>(out ca);
+        PV.profile.TryGet<Vignette>(out vig);
     }
 
     // Start is called before the first frame update
@@ -131,9 +133,9 @@ public class comboManager : MonoBehaviour
     private IEnumerator UpdateCameraZoomAndBloods()
     {
         float timeElapsed = 0;
-        float caOrigin = ca.intensity;
-        float bloomOrigin = bloom.intensity;
-        float vigOrigin = vig.intensity;
+        float caOrigin = (float)ca.intensity;
+        float bloomOrigin = (float)bloom.intensity;
+        float vigOrigin = (float)vig.intensity;
         float cameraSizeOrigin = playerCamera.m_Lens.OrthographicSize;
         while(timeElapsed <= transitionDuration)
         {
