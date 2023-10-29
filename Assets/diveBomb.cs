@@ -11,6 +11,7 @@ public class diveBomb : Attacks
     private float timer;
 
     private bool move;
+    [SerializeField] FMODUnity.EventReference diveBombSound;
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class diveBomb : Attacks
         Vector3 dirVec = transform.position - player.transform.position;
         float angle = Mathf.Atan2(dirVec.y, dirVec.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, (angle+90)));
+        FMODUnity.RuntimeManager.PlayOneShot(diveBombSound);
     }
 
 

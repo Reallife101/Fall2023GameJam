@@ -4727,6 +4727,13 @@ MonoBehaviour:
   speed: 5
   destroyAfterTime: 0
   destroytime: 10
+  diveBombSound:
+    Guid:
+      Data1: -768935155
+      Data2: 1332732074
+      Data3: 2055058327
+      Data4: 1583450170
+    Path: event:/EnemyFly
 --- !u!114 &8149506169862859864
 MonoBehaviour:
   m_ObjectHideFlags: 0
