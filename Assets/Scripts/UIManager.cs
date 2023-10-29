@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] List<Image> heartContainer;
-    [SerializeField] Sprite heart;
+    [SerializeField] List<GameObject> heartContainer;
     int heartIndex;
     [SerializeField] float flashbangTime;
     [SerializeField] Image flashbangImage;
@@ -16,9 +15,9 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        foreach(Image i in heartContainer)
+        foreach(GameObject i in heartContainer)
         {
-            i.sprite = heart;
+            i.SetActive(true);
         }
         heartIndex = heartContainer.Count - 1;
         PlayerHealth.PlayerHitEvent += PlayerHit;
@@ -27,7 +26,7 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             PlayerHit();
         }
@@ -40,7 +39,7 @@ public class UIManager : MonoBehaviour
 
     void PlayerHit()
     {
-        heartContainer[heartIndex].sprite = null;
+        heartContainer[heartIndex].SetActive(false);
         --heartIndex;
         heartIndex = Mathf.Clamp(heartIndex, 0, heartContainer.Count - 1);
 
@@ -53,8 +52,8 @@ public class UIManager : MonoBehaviour
 
     void PlayerHealed()
     {
-        
-        heartContainer[heartIndex].sprite = heart;
+
+        heartContainer[heartIndex].SetActive(true);
         ++heartIndex;
         heartIndex = Mathf.Clamp(heartIndex, 0, heartContainer.Count - 1);
     }

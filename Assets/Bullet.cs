@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] protected Rigidbody2D rb;
     [SerializeField] protected float speed;
     [SerializeField] protected float damage;
+    [SerializeField] protected int pointsOnHit;
     Vector2 velocity;
     // Start is called before the first frame update
     virtual protected void Start()
@@ -29,6 +30,7 @@ public class Bullet : MonoBehaviour
         if (enemy)
         {
             enemy.takeDamage(damage);
+            pointManager.PM_Instance.GainPoint(pointsOnHit);
             Destroy(gameObject);
         }
     }
@@ -40,6 +42,7 @@ public class Bullet : MonoBehaviour
         if (enemy)
         {
             enemy.takeDamage(damage);
+            pointManager.PM_Instance.GainPoint(pointsOnHit);
             Destroy(gameObject);
         }
     }

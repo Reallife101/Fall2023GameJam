@@ -102,6 +102,7 @@ MonoBehaviour:
   rb: {fileID: 5702372188431678412}
   speed: 35
   damage: 1
+  pointsOnHit: 100
 --- !u!50 &5702372188431678412
 Rigidbody2D:
   serializedVersion: 4

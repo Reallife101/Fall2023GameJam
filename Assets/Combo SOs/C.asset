@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0040dbdbd3f094348b7745aa51c2325e, type: 3}
+  m_Name: C
+  m_EditorClassIdentifier: 
+  letterGradeSprite: {fileID: 0}
+  letterGradeText: Cracked
+  comboMeterColor: {r: 0.1121045, g: 0.7075472, b: 0.044499747, a: 1}
+  pointsRequiredToNext: 500
+  pointMultiplier: 1.25
+  nextTier: {fileID: 11400000, guid: 32ab3f909e1128845946ac36af0ddf7d, type: 2}
+  prevTier: {fileID: 11400000, guid: 355a566de9bc58047b75c14e07cf81b8, type: 2}
+  cameraZoomAmount: 10
+  bloomIntensity: 1
+  chromaticAbberationIntensity: 0.1
+  vignetteIntensity: 0.15
+  comboSound:
+    Guid:
+      Data1: 1200228326
+      Data2: 1149027288
+      Data3: 1069372855
+      Data4: 872368253
+    Path: event:/SoundEffects/UI Sound Effects/Cracked
+  dastardlyComboSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
