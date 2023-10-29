@@ -4591,6 +4591,7 @@ GameObject:
   - component: {fileID: 4040463442679604611}
   - component: {fileID: 7240695201719969368}
   - component: {fileID: 8149506169862859864}
+  - component: {fileID: 6472294555933087092}
   m_Layer: 0
   m_Name: Flyby1
   m_TagString: hurt
@@ -4739,3 +4740,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStopTime: 0.25
+--- !u!114 &6472294555933087092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884121967346888840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1857720852
+      Data2: 1326718264
+      Data3: 2029013695
+      Data4: 572496896
+    Path: event:/Explode
+  Event: 
+  PlayEvent: 2
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

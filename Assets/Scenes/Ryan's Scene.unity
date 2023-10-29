@@ -3347,6 +3347,26 @@ PrefabInstance:
       propertyPath: explosion
       value: 
       objectReference: {fileID: 1134129239631916, guid: 93265c9fcdc18ad44bb3f5529e8d7404, type: 3}
+    - target: {fileID: 5717046311453601009, guid: e26db5efad6fbb047a460bd0ce44f13f, type: 3}
+      propertyPath: takeDamageSound.Path
+      value: event:/Player Damaged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5717046311453601009, guid: e26db5efad6fbb047a460bd0ce44f13f, type: 3}
+      propertyPath: takeDamageSound.Guid.Data1
+      value: 1778622714
+      objectReference: {fileID: 0}
+    - target: {fileID: 5717046311453601009, guid: e26db5efad6fbb047a460bd0ce44f13f, type: 3}
+      propertyPath: takeDamageSound.Guid.Data2
+      value: 1090735637
+      objectReference: {fileID: 0}
+    - target: {fileID: 5717046311453601009, guid: e26db5efad6fbb047a460bd0ce44f13f, type: 3}
+      propertyPath: takeDamageSound.Guid.Data3
+      value: 504589490
+      objectReference: {fileID: 0}
+    - target: {fileID: 5717046311453601009, guid: e26db5efad6fbb047a460bd0ce44f13f, type: 3}
+      propertyPath: takeDamageSound.Guid.Data4
+      value: 2037519390
+      objectReference: {fileID: 0}
     - target: {fileID: 6295759807110114506, guid: e26db5efad6fbb047a460bd0ce44f13f, type: 3}
       propertyPath: reloadSFX.Path
       value: event:/Reloads
