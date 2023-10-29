@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6962171040187773958}
   - component: {fileID: 6962171040187773959}
   - component: {fileID: 6962171040187773956}
+  - component: {fileID: 1517390808875718825}
   m_Layer: 0
   m_Name: Beam
   m_TagString: hurt
@@ -133,6 +134,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 36.786316, y: 4.695531}
   m_EdgeRadius: 0
+--- !u!114 &1517390808875718825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962171040187773957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d919a8c391c8784c8252c1c2a930797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blastChargeSound:
+    Guid:
+      Data1: -152181864
+      Data2: 1094912395
+      Data3: 1568676530
+      Data4: -1029380489
+    Path: event:/Laser
 --- !u!1 &6962171041339140737
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6962171041339140739}
   - component: {fileID: 6962171041339140736}
+  - component: {fileID: 5649912499712097456}
   m_Layer: 0
   m_Name: Moving Parent Beam
   m_TagString: Untagged
@@ -186,6 +207,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5649912499712097456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962171041339140737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d919a8c391c8784c8252c1c2a930797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blastChargeSound:
+    Guid:
+      Data1: -152181864
+      Data2: 1094912395
+      Data3: 1568676530
+      Data4: -1029380489
+    Path: event:/Laser
 --- !u!1 &6962171041453274685
 GameObject:
   m_ObjectHideFlags: 0
