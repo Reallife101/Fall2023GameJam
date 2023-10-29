@@ -1240,6 +1240,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 7131623919760729521, guid: 539786a27e0751e4986a7c6648f342d3, type: 3}
+      propertyPath: m_overrideHtmlColors
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7131623920173422592, guid: 539786a27e0751e4986a7c6648f342d3, type: 3}
       propertyPath: m_fontAsset
       value: 
