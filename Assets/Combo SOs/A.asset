@@ -25,11 +25,11 @@ MonoBehaviour:
   vignetteIntensity: 0.45
   comboSound:
     Guid:
-      Data1: 170723501
-      Data2: 1077573513
-      Data3: 1560523906
-      Data4: 1840766667
-    Path: event:/SoundEffects/UI Sound Effects/Awesome
+      Data1: -1614190140
+      Data2: 1308439861
+      Data3: 1803774386
+      Data4: 1007591524
+    Path: event:/UI SFX/C
   dastardlyComboSound:
     Guid:
       Data1: 0
