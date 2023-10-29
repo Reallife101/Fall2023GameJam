@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    [SerializeField] float shakeIntensity;
-    [SerializeField] float shakeTime;
+    [SerializeField] protected float shakeIntensity;
+    [SerializeField] protected float shakeTime;
 
     private Vector3 mousePos;
     private Camera cam;

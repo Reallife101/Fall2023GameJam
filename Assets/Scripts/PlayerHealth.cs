@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] string borderTag;
     bool invul = false;
     [SerializeField] int invulTime;
+    [SerializeField] float timeSlowTime = 0.75f;
 
     [SerializeField]
     private GameObject explosion;
@@ -45,6 +46,7 @@ public class PlayerHealth : MonoBehaviour
     {
         PlayerHitEvent?.Invoke();
         currentHealth--;
+        TimeManager.Instance.TimeSlow(timeSlowTime);
         if(currentHealth <= 0)
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
