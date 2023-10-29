@@ -1398,6 +1398,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5717046311453601009, guid: e26db5efad6fbb047a460bd0ce44f13f, type: 3}
+      propertyPath: borderTag
+      value: borders
+      objectReference: {fileID: 0}
     - target: {fileID: 9092834772659771642, guid: e26db5efad6fbb047a460bd0ce44f13f, type: 3}
       propertyPath: m_RootOrder
       value: 1

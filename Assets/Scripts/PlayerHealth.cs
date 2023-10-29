@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] int maxHealth;
     int currentHealth;
     [SerializeField] string enemyProjectileTag;
+    [SerializeField] string borderTag;
     bool invul = false;
     [SerializeField] int invulTime;
 
@@ -21,7 +22,16 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == enemyProjectileTag && !invul)
+        if ((collision.gameObject.tag == enemyProjectileTag || collision.gameObject.tag == borderTag) && !invul)
+        {
+            StartCoroutine(invincibilityCoroutine());
+            TakeDamage();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if ((collision.gameObject.tag == enemyProjectileTag || collision.gameObject.tag == borderTag) && !invul)
         {
             StartCoroutine(invincibilityCoroutine());
             TakeDamage();
