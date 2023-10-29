@@ -35,7 +35,7 @@ public class BossAI : AI
     // Start is called before the first frame update
     void Start()
     {
-        delayBetweenAttacks = 2;
+        delayBetweenAttacks = 1;
         attackList = new List<Attacks>();
         timeElapsed = 0;
         currentPhase = 0;
@@ -81,15 +81,15 @@ public class BossAI : AI
     {
         if (currentHealth > Health/2)
         {
-            delayBetweenAttacks = 2;
+            delayBetweenAttacks = 1;
         }
         else if (currentHealth > Health / 4)
         {
-            delayBetweenAttacks = 1;
+            delayBetweenAttacks = .5f;
         }
         else
         {
-            delayBetweenAttacks = 0.5f;
+            delayBetweenAttacks = 0f;
         }
 
         if (canAttack)
@@ -121,6 +121,7 @@ public class BossAI : AI
             updatePhase();
             hbAnimator.SetBool("down", false);
             yield return new WaitForSeconds(3f);
+            canAttack = true;
             invincible = false;
         }    
     }

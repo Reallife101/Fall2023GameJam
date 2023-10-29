@@ -19,7 +19,11 @@ public class summonDiveBomb : Attacks
 
     public override void stopAtk()
     {
-        StopCoroutine(coroutine);
+        if (coroutine != null)
+        {
+
+            StopCoroutine(coroutine);
+        }
     }
 
     // Start is called before the first frame update

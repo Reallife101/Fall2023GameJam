@@ -11,11 +11,14 @@ public class burstAttack : Attacks
     [SerializeField]
     int loopAmount;
 
-    private EnemyAI ai;
+    [SerializeField]
+    List<GameObject> projectiles;
+
+    private AI ai;
 
     private void Start()
     {
-        ai = GetComponent<EnemyAI>();
+        ai = GetComponent<AI>();
     }
 
     public override void atk()
@@ -30,7 +33,7 @@ public class burstAttack : Attacks
     {
         for (int i = 0; i < loopAmount; i++)
         {
-            Instantiate(projectile, transform.position + transform.up * spawnInfront, transform.rotation * Quaternion.Euler(Vector3.forward));
+            Instantiate(projectiles[Random.Range(0,projectiles.Count)], transform.position + transform.up * spawnInfront, transform.rotation * Quaternion.Euler(Vector3.forward));
             yield return new WaitForSeconds(waitTime);
         }
 
