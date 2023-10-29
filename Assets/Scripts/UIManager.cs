@@ -63,7 +63,6 @@ public class UIManager : MonoBehaviour
         float timePassed = 0;
         while(timePassed < flashbangTime)
         {
-            Debug.Log(timePassed);
             timePassed += Time.deltaTime;
             Color flashbangColor = flashbangImage.color;
             flashbangColor.a = flashbangCurve.Evaluate(timePassed / flashbangTime);
