@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField]
     private GameObject explosion;
+    [SerializeField] FMODUnity.EventReference takeDamageSound;
 
     private void Start()
     {
@@ -47,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
         PlayerHitEvent?.Invoke();
         currentHealth--;
         TimeManager.Instance.TimeSlow(timeSlowTime);
+        FMODUnity.RuntimeManager.PlayOneShot(takeDamageSound);
         if(currentHealth <= 0)
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
