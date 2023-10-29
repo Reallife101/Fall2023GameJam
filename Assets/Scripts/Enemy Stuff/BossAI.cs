@@ -46,6 +46,8 @@ public class BossAI : AI
     [SerializeField]
     private List<GameObject> sprites;
 
+    [SerializeField] FMODUnity.EventReference bossShoot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -114,6 +116,7 @@ public class BossAI : AI
             if (timeElapsed >= delayBetweenAttacks)
             {
                 attackList[Random.Range(0, attackList.Count)].atk();
+                FMODUnity.RuntimeManager.PlayOneShot(bossShoot);
                 timeElapsed = 0;
                 canAttack = false;
             }
