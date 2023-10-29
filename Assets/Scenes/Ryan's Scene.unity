@@ -1121,6 +1121,7 @@ GameObject:
   - component: {fileID: 1302115033}
   - component: {fileID: 1302115034}
   - component: {fileID: 1302115035}
+  - component: {fileID: 1302115036}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -1167,6 +1168,7 @@ MonoBehaviour:
   - {fileID: 1302115034}
   - {fileID: 1302115033}
   - {fileID: 1302115035}
+  - {fileID: 1302115036}
   phases:
   - {fileID: 11400000, guid: d67edfdb679335c4abd2b5f0e8e99c5d, type: 2}
   - {fileID: 11400000, guid: ff189162420eae346afe15a1aa2f980e, type: 2}
@@ -1354,6 +1356,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 0}
   animator: {fileID: 1974608458}
+--- !u!114 &1302115036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302115024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8849dff88300d18438cfbc5af36a4ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
+  spawnInfront: 5
+  waitTime: 3.5
+  loopAmount: 1
+  projectiles:
+  - {fileID: 6975690218413321749, guid: e7c38d3e72ba3584a8bbbd5411f47a9c, type: 3}
 --- !u!1 &1307184297
 GameObject:
   m_ObjectHideFlags: 0

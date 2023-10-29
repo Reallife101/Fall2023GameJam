@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phaseName: Phase 1
   BorderTrigger: oneThirdBorder
-  maxHealth: 400
-  attackListIndex: 000000000100000002000000
+  maxHealth: 10
+  attackListIndex: 050000000500000005000000
