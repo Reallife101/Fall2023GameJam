@@ -6,22 +6,16 @@ public class switchWeapons : MonoBehaviour
 {
     [SerializeField] List<GameObject> weapons;
     [SerializeField] List<GameObject> UI;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField]
+    private GameObject spark;
 
     public void UIOn(int i)
     {
         allOff();
+        if (spark != null)
+        {
+            Instantiate(spark, transform.position, Quaternion.identity);
+        }
 
         weapons[i].SetActive(true);
         UI[i].SetActive(true);
