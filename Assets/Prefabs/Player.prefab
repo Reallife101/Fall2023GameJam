@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9092834772659771644}
   - component: {fileID: 9092834772659771643}
   - component: {fileID: 9092834772659771640}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -169,6 +169,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: sovietEraFirearm
       objectReference: {fileID: 0}
+    - target: {fileID: 1556116638909325838, guid: 3f61b2974e172a74995e252bb87ad9a6, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919749834121858151, guid: 3f61b2974e172a74995e252bb87ad9a6, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3727282001450656509, guid: 3f61b2974e172a74995e252bb87ad9a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.4
@@ -180,6 +188,10 @@ PrefabInstance:
     - target: {fileID: 3727282001450656509, guid: 3f61b2974e172a74995e252bb87ad9a6, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208784800484258358, guid: 3f61b2974e172a74995e252bb87ad9a6, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6296113155679683549, guid: 3f61b2974e172a74995e252bb87ad9a6, type: 3}
       propertyPath: cam
