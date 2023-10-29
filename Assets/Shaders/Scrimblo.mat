@@ -58,6 +58,6 @@ Material:
     - _ScrollSpeed: 2
     m_Colors:
     - _Base_Color: {r: 0, g: 0, b: 0, a: 0}
-    - _Glow_Color: {r: 0.3358498, g: 1, b: 0, a: 0}
+    - _Glow_Color: {r: 1, g: 0.13504842, b: 0, a: 0}
     - _Scroll_Dir: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
