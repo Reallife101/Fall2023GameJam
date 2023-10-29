@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    [SerializeField] string OpeningCutsceneName;
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(OpeningCutsceneName);
     }
 
     public void QuitGame()

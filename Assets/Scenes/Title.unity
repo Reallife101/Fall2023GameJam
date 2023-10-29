@@ -2484,6 +2484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c8c6d8991182d4db930e2af131aa52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OpeningCutsceneName: OpeningCutscene
 --- !u!1 &940359707
 GameObject:
   m_ObjectHideFlags: 0

@@ -103,7 +103,7 @@ MonoBehaviour:
   rb: {fileID: 5702372188431678412}
   speed: 35
   damage: 1
-  pointsOnHit: 100
+  pointsOnHit: 50
   spark: {fileID: 1995403933065894, guid: 76ba919c58f5ea14d881416257cacdd4, type: 3}
 --- !u!50 &5702372188431678412
 Rigidbody2D:
