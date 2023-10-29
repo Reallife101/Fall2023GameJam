@@ -70,24 +70,26 @@ public class playerController : MonoBehaviour
         {
             if (transform.position.y < -maxMovement.y)
             {
-                myRB.gravityScale = 0f;
+                //myRB.gravityScale = 0f;
                 newYVelocity = 0f;
             }
             else
             {
-                myRB.gravityScale = 1f;
+                //myRB.gravityScale = 1f;
+                newYVelocity = -5f;
             };
         }
         else
         {
             if (transform.position.y > maxMovement.y)
             {
-                myRB.gravityScale = 0f;
+                //myRB.gravityScale = 0f;
                 newYVelocity = 0f;
             }
             else
             {
-                myRB.gravityScale = -1f;
+                //myRB.gravityScale = -1f;
+                newYVelocity = 5f;
             }
             
         }

@@ -19,7 +19,6 @@ public class BossAI : AI
     [SerializeField]
     private List<BossPhaseSO> phases;
 
-    [SerializeField]
     private float delayBetweenAttacks;
 
     [SerializeField]
@@ -36,6 +35,7 @@ public class BossAI : AI
     // Start is called before the first frame update
     void Start()
     {
+        delayBetweenAttacks = 2;
         attackList = new List<Attacks>();
         timeElapsed = 0;
         currentPhase = 0;
@@ -79,6 +79,19 @@ public class BossAI : AI
     // Update is called once per frame
     void Update()
     {
+        if (currentHealth > Health/2)
+        {
+            delayBetweenAttacks = 2;
+        }
+        else if (currentHealth > Health / 4)
+        {
+            delayBetweenAttacks = 1;
+        }
+        else
+        {
+            delayBetweenAttacks = 0.5f;
+        }
+
         if (canAttack)
         {
             timeElapsed += Time.deltaTime;
