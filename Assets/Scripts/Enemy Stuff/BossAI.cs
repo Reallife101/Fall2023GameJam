@@ -132,6 +132,7 @@ public class BossAI : AI
         Health = phases[currentPhase].maxHealth;
         currentHealth = Health;
         hb.sliderMax(Health);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("bossPhase", phases[currentPhase].bossPhase);
 
         //Deal with Attacks
         attackList.Clear();
