@@ -104,10 +104,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 0
+  canAttack: 1
   attackList:
   - {fileID: 1519737973051395956}
   delayBetweenAttacks: 1
-  canAttack: 1
+  explosion: {fileID: 1134129239631916, guid: 93265c9fcdc18ad44bb3f5529e8d7404, type: 3}
 --- !u!114 &8934933582181208190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +123,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 8147124044907786985, guid: 3dfd541fa52e92b42b1e530901fe1252, type: 3}
   spawnInfront: 1
+  waves: 0
+  timeBetweenWaves: 0
+  alternate: 0
 --- !u!114 &1542161094016692024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +161,7 @@ MonoBehaviour:
   spawnInfront: 0.5
   waitTime: 0.25
   loopAmount: 3
+  projectiles: []
 --- !u!114 &4981096992347729223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +197,7 @@ MonoBehaviour:
   attackList:
   - {fileID: 4981096992347729223}
   - {fileID: 1542161094016692024}
+  waitTime: 0
 --- !u!61 &5057092031154800435
 BoxCollider2D:
   m_ObjectHideFlags: 0

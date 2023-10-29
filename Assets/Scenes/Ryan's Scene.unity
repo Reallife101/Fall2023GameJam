@@ -365,11 +365,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3997340222948518198, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 29.950012
+      value: 29.949951
       objectReference: {fileID: 0}
     - target: {fileID: 3997340222948518198, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -89.01
+      value: -89.01001
       objectReference: {fileID: 0}
     - target: {fileID: 6450056917337051340, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
       propertyPath: m_RootOrder
@@ -788,9 +788,9 @@ GameObject:
   - component: {fileID: 1302115025}
   - component: {fileID: 1302115029}
   - component: {fileID: 1302115030}
-  - component: {fileID: 1302115031}
   - component: {fileID: 1302115032}
   - component: {fileID: 1302115033}
+  - component: {fileID: 1302115034}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -834,7 +834,7 @@ MonoBehaviour:
   allAttacks:
   - {fileID: 1302115025}
   - {fileID: 1302115030}
-  - {fileID: 1302115031}
+  - {fileID: 1302115034}
   - {fileID: 1302115033}
   phases:
   - {fileID: 11400000, guid: d67edfdb679335c4abd2b5f0e8e99c5d, type: 2}
@@ -956,21 +956,6 @@ MonoBehaviour:
   maxBullet: 15
   maxSpread: 60
   waitTime: 0.2
---- !u!114 &1302115031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302115024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604f8423339f9d14199a679dde60b179, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
-  waves: 5
-  enemy: {fileID: 6884121967346888840, guid: 5c234a3541d073d44ac2f7ede336ef65, type: 3}
 --- !u!114 &1302115032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1008,8 +993,23 @@ MonoBehaviour:
   projectile: {fileID: 0}
   attackList:
   - {fileID: 1302115032}
-  - {fileID: 1302115031}
+  - {fileID: 1302115034}
   waitTime: 5.5
+--- !u!114 &1302115034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302115024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5064fe9f0fc3ccf4aa88cb3285eeb39a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
+  waves: 5
+  enemy: {fileID: 6884121967346888840, guid: 5c234a3541d073d44ac2f7ede336ef65, type: 3}
 --- !u!1 &1347772105
 GameObject:
   m_ObjectHideFlags: 0
