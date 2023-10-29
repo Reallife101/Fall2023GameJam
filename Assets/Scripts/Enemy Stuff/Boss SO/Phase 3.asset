@@ -15,4 +15,5 @@ MonoBehaviour:
   phaseName: Phase 2 ^-^
   BorderTrigger: rotateOneThird
   maxHealth: 200
+  bossPhase: 2
   attackListIndex: 0100000002000000

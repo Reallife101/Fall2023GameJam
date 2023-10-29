@@ -8,6 +8,7 @@ public class BossPhaseSO : ScriptableObject
     public string BorderTrigger;
 
     public float maxHealth;
+    public float bossPhase;
     
     public List<int> attackListIndex;
 }
