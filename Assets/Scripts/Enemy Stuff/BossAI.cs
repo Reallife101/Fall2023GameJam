@@ -9,6 +9,9 @@ public class BossAI : AI
     private healthBar hb;
 
     [SerializeField]
+    private switchWeapons sw;
+
+    [SerializeField]
     private TMP_Text phaseName;
 
     [SerializeField]
@@ -134,6 +137,7 @@ public class BossAI : AI
         Health = phases[currentPhase].maxHealth;
         currentHealth = Health;
         hb.sliderMax(Health);
+        sw.UIOn(currentPhase);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("bossPhase", phases[currentPhase].bossPhase);
 
         //Deal with Attacks
