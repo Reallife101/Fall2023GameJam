@@ -16,3 +16,4 @@ MonoBehaviour:
   BorderTrigger: rotateOneThird
   maxHealth: 50
   attackListIndex: 01000000
+  phaseParam: 2

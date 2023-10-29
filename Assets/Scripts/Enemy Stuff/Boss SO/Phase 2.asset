@@ -16,3 +16,4 @@ MonoBehaviour:
   BorderTrigger: halfBorder
   maxHealth: 50
   attackListIndex: 03000000
+  phaseParam: 2
