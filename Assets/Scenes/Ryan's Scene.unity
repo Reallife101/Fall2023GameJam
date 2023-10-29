@@ -1176,6 +1176,7 @@ MonoBehaviour:
   hbAnimator: {fileID: 2055512600}
   borderAnimator: {fileID: 1347772107}
   invincible: 0
+  timeStopLength: 1.2
 --- !u!212 &1302115027
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -31,6 +31,7 @@ public class BossAI : AI
     private float currentHealth;
     private int currentPhase;
 
+    [SerializeField] private float timeStopLength;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +61,7 @@ public class BossAI : AI
             {
                 attack.stopAtk();
             }
+            TimeManager.Instance.TimeSlow(timeStopLength);
             StartCoroutine(goNextPhase());
         }
 
