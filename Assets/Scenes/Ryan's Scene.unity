@@ -2058,11 +2058,18 @@ MonoBehaviour:
   - {fileID: 758665098}
   bossShoot:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1911895475
+      Data2: 1297903388
+      Data3: -870070138
+      Data4: -22698382
+    Path: event:/Boss Shoot
+  warningSound:
+    Guid:
+      Data1: -1634243204
+      Data2: 1134020104
+      Data3: 357124024
+      Data4: 67877168
+    Path: event:/Warning
 --- !u!212 &1302115027
 SpriteRenderer:
   m_ObjectHideFlags: 0
