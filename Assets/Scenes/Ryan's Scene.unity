@@ -1332,6 +1332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 200
   canAttack: 1
+  warning: {fileID: 6042067461326081782, guid: c369ac1cb67d05b41b595b16ea7a79f3, type: 3}
   hb: {fileID: 2055512598}
   sw: {fileID: 1459563185}
   phaseName: {fileID: 1624061174}
