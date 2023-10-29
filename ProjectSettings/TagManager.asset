@@ -6,6 +6,7 @@ TagManager:
   tags:
   - borders
   - Spawn
+  - hurt
   layers:
   - Default
   - TransparentFX

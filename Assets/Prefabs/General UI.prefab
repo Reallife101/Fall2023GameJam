@@ -1690,7 +1690,7 @@ PrefabInstance:
     - target: {fileID: 1327248460012309141, guid: a68d22803a21bb943b05f3442bff8ad2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9125c204f566db048a92ebcb64d9d14a, type: 3}
+      objectReference: {fileID: 21300000, guid: bfe075e5af350784cb2b3690668c5d4b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a68d22803a21bb943b05f3442bff8ad2, type: 3}
 --- !u!1 &3235647817383885459 stripped
@@ -1801,7 +1801,7 @@ PrefabInstance:
     - target: {fileID: 1327248460012309141, guid: a68d22803a21bb943b05f3442bff8ad2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9125c204f566db048a92ebcb64d9d14a, type: 3}
+      objectReference: {fileID: 21300000, guid: bfe075e5af350784cb2b3690668c5d4b, type: 3}
     - target: {fileID: 1327248460012309141, guid: a68d22803a21bb943b05f3442bff8ad2, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -1928,7 +1928,7 @@ PrefabInstance:
     - target: {fileID: 1327248460012309141, guid: a68d22803a21bb943b05f3442bff8ad2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9125c204f566db048a92ebcb64d9d14a, type: 3}
+      objectReference: {fileID: 21300000, guid: bfe075e5af350784cb2b3690668c5d4b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a68d22803a21bb943b05f3442bff8ad2, type: 3}
 --- !u!1 &3235647816692529761 stripped
