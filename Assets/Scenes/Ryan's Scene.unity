@@ -307,7 +307,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f159b4d0b4b62ad4e87e92aca934b7fc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f635c765534ffbf49884b2039f4ef50d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -640,53 +640,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 268238576203895642, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 920127151095586712, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
       propertyPath: m_Name
       value: GunUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1041370536655278194, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 362.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3997340222948518198, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3997340222948518198, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3997340222948518198, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3997340222948518198, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 186.0918
-      objectReference: {fileID: 0}
-    - target: {fileID: 3997340222948518198, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 29.949951
-      objectReference: {fileID: 0}
-    - target: {fileID: 3997340222948518198, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 641
-      objectReference: {fileID: 0}
-    - target: {fileID: 4891606531630534226, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5073980164131936066, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6254982778690699508, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 362.4
       objectReference: {fileID: 0}
     - target: {fileID: 6450056917337051340, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
       propertyPath: m_RootOrder
@@ -731,10 +687,6 @@ PrefabInstance:
     - target: {fileID: 6450056917337051340, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7522309315940766479, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 362.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
@@ -1085,7 +1037,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 320a51d17f82de6478bf9eb84968eba5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ca31f324dcb17542b9997162622ad0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1576,7 +1528,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: b37cf95ffa6b2b54cb154a189023534b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 47c0169b5dfff5146a9d7dffe2938b31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2637,7 +2589,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a4de83d51b9dd8f41a1de4c07d391c66, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2fe5543e547de7b46bb7377f9dc850a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
