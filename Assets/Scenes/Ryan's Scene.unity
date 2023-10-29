@@ -1232,6 +1232,7 @@ MonoBehaviour:
   Health: 200
   canAttack: 1
   hb: {fileID: 2055512598}
+  sw: {fileID: 1459563185}
   phaseName: {fileID: 1624061174}
   allAttacks:
   - {fileID: 1302115025}
@@ -1247,6 +1248,7 @@ MonoBehaviour:
   hbAnimator: {fileID: 2055512600}
   borderAnimator: {fileID: 1347772107}
   invincible: 0
+  timeStopLength: 1.2
 --- !u!212 &1302115027
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1645,6 +1647,7 @@ MonoBehaviour:
   - {fileID: 1777493381}
   - {fileID: 817448621}
   - {fileID: 1347007324}
+  spark: {fileID: 1750940742320366, guid: 4f6f2101117998040a1bbd4316b0ac84, type: 3}
 --- !u!114 &1624061174 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1123568990124254524, guid: e3f38d412b2e366438acc19d12dae6dc, type: 3}
