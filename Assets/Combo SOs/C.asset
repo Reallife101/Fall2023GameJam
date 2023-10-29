@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: C
   m_EditorClassIdentifier: 
   letterGradeSprite: {fileID: 0}
-  letterGradeText: Cracked
+  letterGradeText: Chaotic
   comboMeterColor: {r: 0.1121045, g: 0.7075472, b: 0.044499747, a: 1}
-  pointsRequiredToNext: 500
+  pointsRequiredToNext: 1250
   pointMultiplier: 1.25
   nextTier: {fileID: 11400000, guid: 32ab3f909e1128845946ac36af0ddf7d, type: 2}
   prevTier: {fileID: 11400000, guid: 355a566de9bc58047b75c14e07cf81b8, type: 2}
-  cameraZoomAmount: 10
+  cameraZoomAmount: 13
   bloomIntensity: 1
   chromaticAbberationIntensity: 0.1
   vignetteIntensity: 0.15

@@ -347,6 +347,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: GunUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3997340222948518198, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997340222948518198, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997340222948518198, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997340222948518198, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 186.0918
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997340222948518198, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 29.950012
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997340222948518198, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -89.01
+      objectReference: {fileID: 0}
     - target: {fileID: 6450056917337051340, guid: e02bf885e6447bd4bac72e5082950b5b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -711,6 +735,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6662125468909911347, guid: df671edea31817549ba68f9f9ab1e39a, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153562904268719289, guid: df671edea31817549ba68f9f9ab1e39a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
