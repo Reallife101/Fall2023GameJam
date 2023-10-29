@@ -25,11 +25,11 @@ MonoBehaviour:
   vignetteIntensity: 0.55
   comboSound:
     Guid:
-      Data1: -1168421208
-      Data2: 1288808313
-      Data3: 1850225042
-      Data4: -1942022735
-    Path: event:/SoundEffects/UI Sound Effects/Sugoi
+      Data1: 1872289275
+      Data2: 1339220846
+      Data3: -813722439
+      Data4: 306863168
+    Path: event:/UI SFX/D
   dastardlyComboSound:
     Guid:
       Data1: 0

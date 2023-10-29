@@ -1197,6 +1197,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3354045303022226013, guid: 2b46232daac647b479769235214cc5e8, type: 3}
+      propertyPath: derankSound.Path
+      value: event:/UI SFX/DeRank
+      objectReference: {fileID: 0}
+    - target: {fileID: 3354045303022226013, guid: 2b46232daac647b479769235214cc5e8, type: 3}
+      propertyPath: derankSound.Guid.Data1
+      value: -2120345595
+      objectReference: {fileID: 0}
+    - target: {fileID: 3354045303022226013, guid: 2b46232daac647b479769235214cc5e8, type: 3}
+      propertyPath: derankSound.Guid.Data2
+      value: 1176276121
+      objectReference: {fileID: 0}
+    - target: {fileID: 3354045303022226013, guid: 2b46232daac647b479769235214cc5e8, type: 3}
+      propertyPath: derankSound.Guid.Data3
+      value: -1296231251
+      objectReference: {fileID: 0}
+    - target: {fileID: 3354045303022226013, guid: 2b46232daac647b479769235214cc5e8, type: 3}
+      propertyPath: derankSound.Guid.Data4
+      value: 537343565
+      objectReference: {fileID: 0}
     - target: {fileID: 3354045303459666348, guid: 2b46232daac647b479769235214cc5e8, type: 3}
       propertyPath: m_Name
       value: General UI NEW
@@ -1292,6 +1312,26 @@ PrefabInstance:
     - target: {fileID: 4386685393715923438, guid: 2b46232daac647b479769235214cc5e8, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5508861415130246952, guid: 2b46232daac647b479769235214cc5e8, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/UI SFX/G
+      objectReference: {fileID: 0}
+    - target: {fileID: 5508861415130246952, guid: 2b46232daac647b479769235214cc5e8, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 2038541778
+      objectReference: {fileID: 0}
+    - target: {fileID: 5508861415130246952, guid: 2b46232daac647b479769235214cc5e8, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1168995610
+      objectReference: {fileID: 0}
+    - target: {fileID: 5508861415130246952, guid: 2b46232daac647b479769235214cc5e8, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 1429444485
+      objectReference: {fileID: 0}
+    - target: {fileID: 5508861415130246952, guid: 2b46232daac647b479769235214cc5e8, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: 989937522
       objectReference: {fileID: 0}
     - target: {fileID: 5508861416038141513, guid: 2b46232daac647b479769235214cc5e8, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1415,6 +1455,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2977007456281480630, guid: e26db5efad6fbb047a460bd0ce44f13f, type: 3}
+      propertyPath: reloadSFX.Path
+      value: event:/Reloads
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977007456281480630, guid: e26db5efad6fbb047a460bd0ce44f13f, type: 3}
+      propertyPath: reloadSFX.Guid.Data1
+      value: -2085364051
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977007456281480630, guid: e26db5efad6fbb047a460bd0ce44f13f, type: 3}
+      propertyPath: reloadSFX.Guid.Data2
+      value: 1094998891
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977007456281480630, guid: e26db5efad6fbb047a460bd0ce44f13f, type: 3}
+      propertyPath: reloadSFX.Guid.Data3
+      value: -517941338
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977007456281480630, guid: e26db5efad6fbb047a460bd0ce44f13f, type: 3}
+      propertyPath: reloadSFX.Guid.Data4
+      value: 1166237323
+      objectReference: {fileID: 0}
     - target: {fileID: 5717046311453601009, guid: e26db5efad6fbb047a460bd0ce44f13f, type: 3}
       propertyPath: borderTag
       value: borders
