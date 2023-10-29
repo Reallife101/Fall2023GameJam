@@ -35,6 +35,11 @@ public class Gun : MonoBehaviour
         gunUI = FindObjectOfType<GunUI>();
     }
 
+    void OnEnable()
+    {
+        gunUI.setMax(loadSize);
+    }
+
     // Update is called once per frame
     void Update()
     {

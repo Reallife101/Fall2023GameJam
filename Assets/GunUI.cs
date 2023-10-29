@@ -20,6 +20,12 @@ public class GunUI : MonoBehaviour
         textMesh.text = bullets + " / " + max;
     }
 
+    public void setMax(int maxB)
+    {
+        this.max = maxB;
+        textMesh.text = this.max + " / " + this.max;
+    }
+
     public void reload(float duration)
     {
         textMesh.text = "reloading";
