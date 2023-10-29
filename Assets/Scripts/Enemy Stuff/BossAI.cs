@@ -32,6 +32,8 @@ public class BossAI : AI
     [SerializeField]
     private Animator hbAnimator;
     [SerializeField]
+    private Animator bossAnimator;
+    [SerializeField]
     private Animator borderAnimator;
     public bool invincible;
 
@@ -40,6 +42,9 @@ public class BossAI : AI
     private int currentPhase;
 
     [SerializeField] private float timeStopLength;
+
+    [SerializeField]
+    private List<GameObject> sprites;
 
     // Start is called before the first frame update
     void Start()
@@ -119,6 +124,7 @@ public class BossAI : AI
     {
         invincible = true;
         hbAnimator.SetBool("down", true);
+        bossAnimator.SetBool("up", false);
         yield return new WaitForSeconds(1f);
         if (warning != null && currentPhase < phases.Count)
         {
@@ -135,6 +141,7 @@ public class BossAI : AI
             borderAnimator.SetTrigger(phases[currentPhase].BorderTrigger);
             updatePhase();
             hbAnimator.SetBool("down", false);
+            bossAnimator.SetBool("up", true);
             yield return new WaitForSeconds(3f);
             canAttack = true;
             invincible = false;
@@ -150,6 +157,11 @@ public class BossAI : AI
         sw.UIOn(currentPhase);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("bossPhase", phases[currentPhase].bossPhase);
 
+        foreach (GameObject sp in sprites)
+        {
+            sp.SetActive(false);
+        }
+        sprites[currentPhase].SetActive(true);
         //Deal with Attacks
         attackList.Clear();
         foreach (int index in phases[currentPhase].attackListIndex)
