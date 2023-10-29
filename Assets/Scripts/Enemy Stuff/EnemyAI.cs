@@ -15,6 +15,9 @@ public class EnemyAI : AI
     private float timeElapsed;
     private float currentHealth;
 
+    [SerializeField]
+    private GameObject explosion;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +34,7 @@ public class EnemyAI : AI
 
         if (currentHealth < 0)
         {
+            Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 

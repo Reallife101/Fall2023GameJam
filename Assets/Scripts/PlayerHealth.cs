@@ -15,6 +15,9 @@ public class PlayerHealth : MonoBehaviour
     bool invul = false;
     [SerializeField] int invulTime;
 
+    [SerializeField]
+    private GameObject explosion;
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -44,6 +47,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth--;
         if(currentHealth <= 0)
         {
+            Instantiate(explosion, transform.position, Quaternion.identity);
             PlayerDeathEvent?.Invoke();
             Destroy(gameObject);
         }

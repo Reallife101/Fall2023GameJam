@@ -104,6 +104,7 @@ MonoBehaviour:
   attackList:
   - {fileID: 7240695201719969368}
   delayBetweenAttacks: 5
+  explosion: {fileID: 1134129239631916, guid: 93265c9fcdc18ad44bb3f5529e8d7404, type: 3}
 --- !u!61 &4040463442679604611
 BoxCollider2D:
   m_ObjectHideFlags: 0
