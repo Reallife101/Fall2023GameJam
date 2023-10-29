@@ -12,7 +12,7 @@ public class Shotgun : Gun
         for (int i = 0; i < 5; i++)
         {
             q = Quaternion.AngleAxis((coneSize/5) * i -coneSize / 2f + UnityEngine.Random.Range(-coneSize / 8f, coneSize / 8f), new Vector3(0, 0, 1)) * transform.rotation;
-            Instantiate(bullet, transform.position, q);
+            Instantiate(bullet, bulletSpot.transform.position, q);
         }
         updateBullets();
     }
