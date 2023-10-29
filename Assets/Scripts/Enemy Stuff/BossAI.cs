@@ -47,6 +47,7 @@ public class BossAI : AI
     private List<GameObject> sprites;
 
     [SerializeField] FMODUnity.EventReference bossShoot;
+    [SerializeField] FMODUnity.EventReference warningSound;
 
     // Start is called before the first frame update
     void Start()
@@ -132,6 +133,7 @@ public class BossAI : AI
         if (warning != null && currentPhase < phases.Count)
         {
             Instantiate(warning, new Vector3(0,0,0), Quaternion.identity);
+            FMODUnity.RuntimeManager.PlayOneShot(warningSound);
         }
         yield return new WaitForSeconds(2f);
         currentPhase += 1;
