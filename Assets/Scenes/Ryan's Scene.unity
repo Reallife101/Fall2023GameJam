@@ -1286,6 +1286,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2090163058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7757541454870260837, guid: e26db5efad6fbb047a460bd0ce44f13f, type: 3}
+  m_PrefabInstance: {fileID: 9092834772521035230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2090163061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090163058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: Current Gun
+  TriggerEvent: 11
+  Value: 0
 --- !u!1001 &3237268947237085459
 PrefabInstance:
   m_ObjectHideFlags: 0
