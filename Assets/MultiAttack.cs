@@ -7,13 +7,36 @@ public class MultiAttack : Attacks
     [SerializeField]
     private List<Attacks> attackList;
 
+    [SerializeField]
+    private float waitTime;
+
+    private bool canAttack;
+
+    IEnumerator waitEnable()
+    {
+        yield return new WaitForSeconds(waitTime);
+        canAttack = true;
+    }
+
+    private void Start()
+    {
+        canAttack = true;
+    }
+
     public override void atk()
     {
-        foreach (Attacks attack in attackList)
+        if (canAttack)
         {
-            attack.atk();
+            foreach (Attacks attack in attackList)
+            {
+                attack.atk();
+            }
+            canAttack = false;
+            StartCoroutine(waitEnable());
         }
+
     }
+
 
     public override void stopAtk()
     {
