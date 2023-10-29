@@ -5,6 +5,11 @@ using TMPro;
 
 public class BossAI : AI
 {
+    public static event System.Action BossDies;
+
+    [SerializeField]
+    private GameObject warning;
+
     [SerializeField]
     private healthBar hb;
 
@@ -114,11 +119,16 @@ public class BossAI : AI
     {
         invincible = true;
         hbAnimator.SetBool("down", true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
+        if (warning != null && currentPhase < phases.Count)
+        {
+            Instantiate(warning, new Vector3(0,0,0), Quaternion.identity);
+        }
+        yield return new WaitForSeconds(2f);
         currentPhase += 1;
         if (currentPhase >= phases.Count)
         {
-            Debug.Log("Win");
+            BossDies?.Invoke();
         }
         else
         {
