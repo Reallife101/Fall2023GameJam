@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 3354045302040626257}
   - component: {fileID: 3354045302040626256}
   - component: {fileID: 3354045302040626271}
+  - component: {fileID: 1974608458}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -219,6 +220,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012483b9e671f3c4fa570bfeb439b6ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1974608458
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354045302040626270}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 00142ea179aed9743b955be2c47da620, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3354045302661039058
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,11 +809,11 @@ MonoBehaviour:
   transitionDuration: 0.5
   derankSound:
     Guid:
-      Data1: -1773425095
-      Data2: 1257026292
-      Data3: -52205914
-      Data4: -851551883
-    Path: event:/Tests/TEST
+      Data1: -2120345595
+      Data2: 1176276121
+      Data3: -1296231251
+      Data4: 537343565
+    Path: event:/UI SFX/DeRank
   PV: {fileID: 3354045302661039016}
 --- !u!114 &3354045303022226014
 MonoBehaviour:
@@ -833,6 +854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3354045303459666349}
+  - component: {fileID: 2143713315}
   m_Layer: 0
   m_Name: General UI NEW
   m_TagString: Untagged
@@ -860,6 +882,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2143713315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354045303459666348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4bb53627fbcba478e9889f79e47428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStopCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -3.3212402
+      outSlope: -3.3212402
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.067342795
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3354045303564151153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,7 +1126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6511110855745125074
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1675,23 +1733,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7131623921507967361, guid: 539786a27e0751e4986a7c6648f342d3, type: 3}
       propertyPath: EventReference.Path
-      value: event:/Tests/TEST
+      value: event:/UI SFX/G
       objectReference: {fileID: 0}
     - target: {fileID: 7131623921507967361, guid: 539786a27e0751e4986a7c6648f342d3, type: 3}
       propertyPath: EventReference.Guid.Data1
-      value: -1773425095
+      value: 2038541778
       objectReference: {fileID: 0}
     - target: {fileID: 7131623921507967361, guid: 539786a27e0751e4986a7c6648f342d3, type: 3}
       propertyPath: EventReference.Guid.Data2
-      value: 1257026292
+      value: 1168995610
       objectReference: {fileID: 0}
     - target: {fileID: 7131623921507967361, guid: 539786a27e0751e4986a7c6648f342d3, type: 3}
       propertyPath: EventReference.Guid.Data3
-      value: -52205914
+      value: 1429444485
       objectReference: {fileID: 0}
     - target: {fileID: 7131623921507967361, guid: 539786a27e0751e4986a7c6648f342d3, type: 3}
       propertyPath: EventReference.Guid.Data4
-      value: -851551883
+      value: 989937522
       objectReference: {fileID: 0}
     - target: {fileID: 7131623921507967374, guid: 539786a27e0751e4986a7c6648f342d3, type: 3}
       propertyPath: m_Name
