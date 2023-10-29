@@ -15,4 +15,4 @@ MonoBehaviour:
   phaseName: Phase 1
   BorderTrigger: oneThirdBorder
   maxHealth: 10
-  attackListIndex: 050000000500000005000000
+  attackListIndex: 00000000010000000200000005000000
