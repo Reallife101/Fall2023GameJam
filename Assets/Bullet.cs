@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] protected float damage;
     [SerializeField] protected int pointsOnHit;
     Vector2 velocity;
+    [SerializeField] protected GameObject spark;
     // Start is called before the first frame update
     virtual protected void Start()
     {
@@ -22,6 +23,10 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag=="borders")
         {
+            if (spark != null)
+            {
+                Instantiate(spark, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
 
