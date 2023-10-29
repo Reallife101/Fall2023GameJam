@@ -34,7 +34,10 @@ public class EnemyAI : AI
 
         if (currentHealth < 0)
         {
-            Instantiate(explosion, transform.position, Quaternion.identity);
+            if (explosion != null)
+            {
+                Instantiate(explosion, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
 

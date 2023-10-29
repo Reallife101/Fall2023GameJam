@@ -22,6 +22,10 @@ public class diveBomb : Attacks
     public override void atk()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            return;
+        }
         Vector3 dirVec = transform.position - player.transform.position;
         float angle = Mathf.Atan2(dirVec.y, dirVec.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, (angle+90)));
