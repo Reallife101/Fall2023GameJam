@@ -153,7 +153,7 @@ public class BossAI : AI
 
     public void updatePhase()
     {
-        phaseName.text = phases[currentPhase].name;
+        phaseName.text = phases[currentPhase].phaseName;
         Health = phases[currentPhase].maxHealth;
         currentHealth = Health;
         hb.sliderMax(Health);
