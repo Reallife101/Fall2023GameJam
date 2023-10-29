@@ -18,6 +18,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private int loadSize;
     [SerializeField] protected float coneSize;
     [SerializeField] protected GameObject bulletSpot;
+    [SerializeField] FMODUnity.EventReference reloadSFX;
     private float fClock;
     private float rClock;
     private int inLoad;
@@ -98,6 +99,7 @@ public class Gun : MonoBehaviour
         inLoad = loadSize;
         rClock = reloadDelay;
         FindObjectOfType<GunUI>().reload(reloadDelay);
+        FMODUnity.RuntimeManager.PlayOneShot(reloadSFX);
     }
 
     public int getBullets()
