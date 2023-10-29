@@ -6,7 +6,8 @@ public class TimeManager : MonoBehaviour
 {
     [SerializeField] AnimationCurve timeStopCurve;
     public static TimeManager Instance { get; private set; }
-    private float slowTime;
+    private float slowTimer;
+    private float slowTimerTotal;
 
     // Start is called before the first frame update
 
@@ -20,8 +21,18 @@ public class TimeManager : MonoBehaviour
         Instance = this;
     }
 
-    public void TimeSlow(int time)
+    public void TimeSlow(float time)
     {
+        slowTimer = time;
+        slowTimerTotal = time;
+    }
 
+    private void Update()
+    {
+        if (slowTimer > 0)
+        {
+            slowTimer -= Time.unscaledDeltaTime;
+            Time.timeScale = timeStopCurve.Evaluate(slowTimer / slowTimerTotal);
+        }
     }
 }
