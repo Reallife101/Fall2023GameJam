@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     [SerializeField] GameObject gameOverUI;
-    [SerializeField] GameObject otherUI;
+    [SerializeField] List<GameObject> otherUIs;
 
     private void Awake()
     {
@@ -17,7 +17,10 @@ public class GameOver : MonoBehaviour
     void OnDie()
     {
         gameOverUI.SetActive(true);
-        otherUI.SetActive(false);
+        foreach (GameObject go in otherUIs)
+        {
+            go.SetActive(false);
+        }
         Time.timeScale = 0;
     }
     public void Retry()
