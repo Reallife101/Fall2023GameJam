@@ -178,6 +178,7 @@ MonoBehaviour:
   canAttack: 0
   attackList: []
   delayBetweenAttacks: 0
+  explosion: {fileID: 0}
 --- !u!1 &9133259503731829143
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +253,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.0037735105, b: 0.6803575, a: 0.39215687}
+  m_Color: {r: 0, g: 0.014710827, b: 0.6698113, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
