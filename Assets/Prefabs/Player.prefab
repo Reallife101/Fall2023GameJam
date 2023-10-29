@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9092834772659771643}
   - component: {fileID: 9092834772659771640}
   - component: {fileID: 5717046311453601009}
+  - component: {fileID: 2937559704035492213}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -165,7 +166,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   enemyProjectileTag: hurt
+  borderTag: 
   invulTime: 1
+  explosion: {fileID: 0}
+--- !u!95 &2937559704035492213
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9092834772659771647}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b29e3aba2f0ea84e8540c30fec83175, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &9092834772508167787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -208,6 +231,10 @@ PrefabInstance:
     - target: {fileID: 4208784800484258358, guid: 3f61b2974e172a74995e252bb87ad9a6, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208784800484258358, guid: 3f61b2974e172a74995e252bb87ad9a6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6296113155679683549, guid: 3f61b2974e172a74995e252bb87ad9a6, type: 3}
       propertyPath: cam

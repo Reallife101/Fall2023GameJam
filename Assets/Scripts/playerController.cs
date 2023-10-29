@@ -24,6 +24,8 @@ public class playerController : MonoBehaviour
 
     [SerializeField] private float moveSpeed;
 
+    Animator myAni;
+
     public float MovementSmoothing { get { return movementSmoothing; } set { movementSmoothing = value; } }
 
     private void Awake()
@@ -34,6 +36,7 @@ public class playerController : MonoBehaviour
         playerFall = input.Player.space;
 
         myRB = GetComponent<Rigidbody2D>();
+        myAni = GetComponent<Animator>();
     }
 
     private void Update()
@@ -69,6 +72,7 @@ public class playerController : MonoBehaviour
         //handle jump and fall
         if (fallFloat == 1 || movementVector.y<-0.5f)
         {
+            myAni.SetBool("open", false);
             if (transform.position.y < -maxMovement.y)
             {
                 //myRB.gravityScale = 0f;
@@ -82,6 +86,7 @@ public class playerController : MonoBehaviour
         }
         else
         {
+            myAni.SetBool("open", true);
             if (transform.position.y > maxMovement.y)
             {
                 //myRB.gravityScale = 0f;
