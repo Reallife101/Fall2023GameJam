@@ -5,6 +5,8 @@ using TMPro;
 
 public class BossAI : AI
 {
+    public static event System.Action BossDies;
+
     [SerializeField]
     private healthBar hb;
 
@@ -118,7 +120,7 @@ public class BossAI : AI
         currentPhase += 1;
         if (currentPhase >= phases.Count)
         {
-            Debug.Log("Win");
+            BossDies?.Invoke();
         }
         else
         {
