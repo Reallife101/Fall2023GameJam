@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phaseName: The Queen Unleashed
   BorderTrigger: rotateOneThird
-  maxHealth: 10
+  maxHealth: 200
   bossPhase: 2
   attackListIndex: 010000000200000005000000
