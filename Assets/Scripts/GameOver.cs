@@ -30,7 +30,7 @@ public class GameOver : MonoBehaviour
 
     public void Quit()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Title");
     }
 
     private void OnDestroy()
