@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phaseName: The Qu33n of H34rts
   BorderTrigger: halfBorder
-  maxHealth: 250
-  bossPhase: 0
+  maxHealth: 200
+  bossPhase: 1
   attackListIndex: 03000000

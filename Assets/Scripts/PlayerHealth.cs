@@ -63,6 +63,11 @@ public class PlayerHealth : MonoBehaviour
         PlayerHealEvent?.Invoke();
     }
 
+    public int getHealth()
+    {
+        return currentHealth;
+    }
+
     IEnumerator invincibilityCoroutine()
     {
         invul = true;

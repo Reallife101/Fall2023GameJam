@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Gun : MonoBehaviour
 {
@@ -23,6 +24,14 @@ public class Gun : MonoBehaviour
     private int inLoad;
 
 
+    private PlayerControllerInputAsset input;
+    public InputAction playerShoot { get; private set; }
+    public InputAction playerAim { get; private set; }
+    public InputAction playerReload { get; private set; }
+
+    public bool usingArcadeMachine;
+    Vector2 aim;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -32,18 +41,57 @@ public class Gun : MonoBehaviour
         inLoad = loadSize;
         cam = FindObjectOfType<Camera>();
         gunUI = FindObjectOfType<GunUI>();
+
+        input = new PlayerControllerInputAsset();
+
+        playerShoot = input.Player.Fire;
+        playerAim = input.Player.Aim;
+        playerReload = input.Player.reload;
+        usingArcadeMachine = false;
+
+        playerReload.performed += content => reload();
+        
+
     }
 
     void OnEnable()
     {
         gunUI.setMax(loadSize);
+        playerShoot.Enable();
+        playerAim.Enable();
+        playerReload.Enable();
     }
+
+    private void OnDisable()
+    {
+        playerShoot.Disable();
+        playerAim.Disable();
+        playerReload.Disable();
+    }
+
+
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 direction = mousePos - gameObject.transform.position;
+        aim = playerAim.ReadValue<Vector2>();
+        
+        if (aim.magnitude>0)
+        {
+            usingArcadeMachine = true;
+        }
+
+        Vector3 direction;
+        if (!usingArcadeMachine)
+        {
+            Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+            direction = mousePos - gameObject.transform.position;
+        }
+        else
+        {
+            direction = new Vector3(aim.x, aim.y, 0f);
+        }
+        
         Vector2 velocity = (new Vector2(direction.x, direction.y)).normalized;
 
         
@@ -68,7 +116,8 @@ public class Gun : MonoBehaviour
     }
 
     virtual protected bool getShootInput() {
-        return Input.GetMouseButton(0);
+
+        return playerShoot.ReadValue<float>()>0;
     }
 
     virtual protected void shoot()
@@ -115,4 +164,5 @@ public class Gun : MonoBehaviour
     {
         return loadSize;
     }
+
 }

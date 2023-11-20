@@ -62,6 +62,24 @@ public partial class @PlayerControllerInputAsset : IInputActionCollection2, IDis
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Aim"",
+                    ""type"": ""Value"",
+                    ""id"": ""51da217b-30da-401a-91b0-75eb3a284d67"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""d89991cb-5c24-47ee-a1c4-d84281ec66fe"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -187,15 +205,59 @@ public partial class @PlayerControllerInputAsset : IInputActionCollection2, IDis
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""3ea4d645-4504-4529-b061-ab81934c3752"",
-                    ""path"": ""<Joystick>/stick"",
+                    ""name"": ""Arcade Composite"",
+                    ""id"": ""bb20e8ac-bb36-493d-b25e-2c0882f1cc9d"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Joystick"",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""888f30b3-c581-476e-a91e-6783dc150c04"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""4ed855cd-2575-40dc-9b9f-31c1aede7f92"",
+                    ""path"": ""<HID::Microntek              USB Joystick          >/button5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""ccf6ee93-4e03-45db-ab44-c80c3a773486"",
+                    ""path"": ""<HID::Microntek              USB Joystick          >/button4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""9aff013f-1d5d-4d4a-9e9e-007e26124fa4"",
+                    ""path"": ""<HID::Microntek              USB Joystick          >/button6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
@@ -287,12 +349,45 @@ public partial class @PlayerControllerInputAsset : IInputActionCollection2, IDis
                 },
                 {
                     ""name"": """",
+                    ""id"": ""d35801bd-bfdd-43f0-88bf-5c80edafc91b"",
+                    ""path"": ""<HID::Microntek              USB Joystick          >/button2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""4392bf91-b4bd-48fe-b338-9fdb12f4b1a9"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""space"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c227eebe-ab0f-4ee5-98be-40d0d2c0f155"",
+                    ""path"": ""<Joystick>/stick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a5261dae-6bd2-4baa-b05b-c221ad6ed2fe"",
+                    ""path"": ""<Joystick>/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""reload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -671,6 +766,39 @@ public partial class @PlayerControllerInputAsset : IInputActionCollection2, IDis
                 },
                 {
                     ""name"": """",
+                    ""id"": ""091bba07-ce29-4e6f-92e8-a233d912d0af"",
+                    ""path"": ""<HID::Microntek              USB Joystick          >/button2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Submit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c3138bed-1b24-4cb8-ac95-ffe304b48591"",
+                    ""path"": ""<HID::Microntek              USB Joystick          >/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Submit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e6fc3937-f7cb-4787-9a98-5b76b3813c0d"",
+                    ""path"": ""<Joystick>/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Submit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""82627dcc-3b13-4ba9-841d-e4b746d6553e"",
                     ""path"": ""*/{Cancel}"",
                     ""interactions"": """",
@@ -884,6 +1012,8 @@ public partial class @PlayerControllerInputAsset : IInputActionCollection2, IDis
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_space = m_Player.FindAction("space", throwIfNotFound: true);
+        m_Player_Aim = m_Player.FindAction("Aim", throwIfNotFound: true);
+        m_Player_reload = m_Player.FindAction("reload", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -959,6 +1089,8 @@ public partial class @PlayerControllerInputAsset : IInputActionCollection2, IDis
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_space;
+    private readonly InputAction m_Player_Aim;
+    private readonly InputAction m_Player_reload;
     public struct PlayerActions
     {
         private @PlayerControllerInputAsset m_Wrapper;
@@ -967,6 +1099,8 @@ public partial class @PlayerControllerInputAsset : IInputActionCollection2, IDis
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputAction @space => m_Wrapper.m_Player_space;
+        public InputAction @Aim => m_Wrapper.m_Player_Aim;
+        public InputAction @reload => m_Wrapper.m_Player_reload;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -988,6 +1122,12 @@ public partial class @PlayerControllerInputAsset : IInputActionCollection2, IDis
                 @space.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpace;
                 @space.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpace;
                 @space.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpace;
+                @Aim.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
+                @Aim.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
+                @Aim.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
+                @reload.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReload;
+                @reload.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReload;
+                @reload.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReload;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1004,6 +1144,12 @@ public partial class @PlayerControllerInputAsset : IInputActionCollection2, IDis
                 @space.started += instance.OnSpace;
                 @space.performed += instance.OnSpace;
                 @space.canceled += instance.OnSpace;
+                @Aim.started += instance.OnAim;
+                @Aim.performed += instance.OnAim;
+                @Aim.canceled += instance.OnAim;
+                @reload.started += instance.OnReload;
+                @reload.performed += instance.OnReload;
+                @reload.canceled += instance.OnReload;
             }
         }
     }
@@ -1164,6 +1310,8 @@ public partial class @PlayerControllerInputAsset : IInputActionCollection2, IDis
         void OnLook(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
         void OnSpace(InputAction.CallbackContext context);
+        void OnAim(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

@@ -6,10 +6,19 @@ using UnityEngine.SceneManagement;
 public class NextScene : MonoBehaviour
 {
     [SerializeField] private string NextSceneName;
+    [SerializeField] private string hitlessScene;
+    [SerializeField] private PlayerHealth health;
 
     public void LoadScene()
     {
-        SceneManager.LoadScene(NextSceneName);
+        if(health != null && health.getHealth() == 3)
+        {
+            SceneManager.LoadScene(hitlessScene);
+        }
+        else
+        {
+            SceneManager.LoadScene(NextSceneName);
+        }
     }
 
 }
